@@ -18,8 +18,8 @@ const ProductDetailPage = () => {
     try {
       setLoading(true);
       const response = await getCall(`/products/${params.id}`);
-      if (response?.data?.status === 200) {
-        setProduct(response.data.data);
+      if (response?.status === 200) {
+        setProduct(response.data);
       } else {
         setError("Product not found");
       }
@@ -38,7 +38,7 @@ const ProductDetailPage = () => {
     try {
       setDeleteLoading(true);
       const response = await deleteCall(`/products/${params.id}`);
-      if (response?.data?.status === 200) {
+      if (response?.status === 200) {
         router.push("/admin/products");
       }
     } catch (err) {
@@ -87,7 +87,7 @@ const ProductDetailPage = () => {
           </div>
         </div>
         <Link
-          href="/admin/products"
+          href="/dashboard/product-list"
           className="mt-4 inline-flex items-center text-blue-600 hover:text-blue-800"
         >
           <FiArrowLeft className="mr-1" /> Back to products
@@ -102,7 +102,7 @@ const ProductDetailPage = () => {
     <div className="container mx-auto px-4 py-8">
       <div className="mb-6">
         <Link
-          href="/admin/products"
+          href="/dashboard/product-list"
           className="inline-flex items-center text-blue-600 hover:text-blue-800"
         >
           <FiArrowLeft className="mr-1" /> Back to products

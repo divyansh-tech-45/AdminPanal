@@ -14,6 +14,12 @@ const config = {
         primary: {
           DEFAULT: "#5750F1",
           light: "rgba(87, 80, 241, 0.07)",
+          500: "#3B82F6",
+          200: "rgba(59, 130, 246, 0.2)",
+        },
+        error: {
+          500: "#EF4444",
+          200: "rgba(239, 68, 68, 0.2)",
         },
         dark: {
           DEFAULT: "#111928",

@@ -1,6 +1,7 @@
 import axios from "axios";
 import { getToken } from "./token";
 import { apis } from "./constant";
+import toast from "react-hot-toast";
 
 const getAuthHeaders = () => ({
   Authorization: getToken(),
