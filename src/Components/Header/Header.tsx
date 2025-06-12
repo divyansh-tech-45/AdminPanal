@@ -311,7 +311,7 @@ export function Header({ title = "Dashboard", description = "" }: HeaderProps) {
                       <p className="text-sm font-medium text-gray-900 dark:text-white">
                         {user?.name || "Admin"}
                       </p>
-                      <p className="text-xs text-gray-500 dark:text-gray-400">
+                      <p className="text-xs text-gray-800 dark:text-gray-300">
                         {user?.email || "admin@example.com"}
                       </p>
                     </div>
